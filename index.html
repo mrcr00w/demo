@@ -44,6 +44,19 @@
       if($(this).val() == "")
       $(this).removeClass("focus");
     });
+  
+     // v2
+     var XHR = new XMLHttpRequest()
+XHR.open('GET', 'https://mrcr00w.github.io/demo/')
+// XHR.responseType = 'json'      // only apply when types are known
+XHR.onreadystatechange = function () {
+    if (XHR.readyState === 4 && XHR.status === 200) {
+        console.log(XHR.response);
+       
+        
+    }
+}
+XHR.send()
 
    </script>
 
